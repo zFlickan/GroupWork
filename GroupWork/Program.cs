@@ -25,6 +25,8 @@ namespace GroupWork
 
 		public static void Main()
 		{
+            // TODO: Flytta fler saker till metoder
+
 		    // TODO: GetListOfNames returnerar inte en lista. Namnet är missvisande	
 			string allPersonsString = GetListOfNames();					//Läs in data från användaren till en string
 			
@@ -85,6 +87,7 @@ namespace GroupWork
 				{
 					if (!(theGroups2DArray[i, j] == ""))
 					{
+                        Console.ForegroundColor = ConsoleColor.Black;
 						string trimmedName = theGroups2DArray[i, j].Trim();
 						Console.WriteLine(trimmedName);
 					}
