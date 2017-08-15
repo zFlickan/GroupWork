@@ -114,10 +114,16 @@ namespace GroupWork
 
 		private static int GetNumberOfGroups(int totalNumberOfGroupsPoss)
 		{
-            // TODO: lägg gärna in en redundancy mot att användaren anger t ex en bokstav eller tom sträng
-			Console.Write($"Ange hur många grupper du vill skapa (du kan ange max {totalNumberOfGroupsPoss} grupper): ");
-			int numberOfGroups = Convert.ToInt32(Console.ReadLine());
-			return numberOfGroups;
+            int numberOfGroups;
+            while (true)
+            {
+                Console.Write($"Ange hur många grupper du vill skapa (du kan ange max {totalNumberOfGroupsPoss} grupper): ");
+                string input = Console.ReadLine();
+                if (int.TryParse(input , out numberOfGroups)){
+                    return numberOfGroups;
+                }
+                
+            }
 		}
 
 		private static string GetListOfNames()
