@@ -25,7 +25,7 @@ namespace GroupWork
 
 		public static void Main()
 		{
-			
+		    // TODO: GetListOfNames returnerar inte en lista. Namnet är missvisande	
 			string allPersonsString = GetListOfNames();					//Läs in data från användaren till en string
 			
 			string[] allPersonsArray = allPersonsString.Split(',');		//Skapa en array från strängen
@@ -39,6 +39,7 @@ namespace GroupWork
 			//Läs in data från användaren
 			int numberOfGroups = GetNumberOfGroups(totalNumberOfGroupsPoss);
 			
+            // TODO: denna variabel är överflödig
 			int numberOfPeoplePerGroup = numberOfPeople / numberOfGroups;		//Beräkna hur många medlemmar det blir per grupp
 
 			int rest = numberOfPeople % numberOfGroups;							//Beräkna eventuellt restvärde
@@ -106,6 +107,7 @@ namespace GroupWork
 
 		private static int GetNumberOfGroups(int totalNumberOfGroupsPoss)
 		{
+            // TODO: lägg gärna in en redundancy mot att användaren anger t ex en bokstav eller tom sträng
 			Console.Write($"Ange hur många grupper du vill skapa (du kan ange max {totalNumberOfGroupsPoss} grupper): ");
 			int numberOfGroups = Convert.ToInt32(Console.ReadLine());
 			return numberOfGroups;
