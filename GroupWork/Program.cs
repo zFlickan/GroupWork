@@ -90,7 +90,11 @@ namespace GroupWork
                         Console.ForegroundColor = ConsoleColor.Black;
 						string trimmedName = theGroups2DArray[i, j].Trim();
 						Console.WriteLine(trimmedName);
-					}
+                    }
+                    else
+                    {
+                        Console.WriteLine(theGroups2DArray[0,0].Trim());
+                    }
 					
 				}
 				Console.WriteLine();
